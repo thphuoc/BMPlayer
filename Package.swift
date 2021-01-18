@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v10)
     ],
     targets: [
-        .target(name: "BMPlayer", path: "Sources")
+        .target(name: "BMPlayer", path: "Source")
     ],
     swiftLanguageVersions: [
         .v5
