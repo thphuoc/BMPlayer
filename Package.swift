@@ -6,6 +6,9 @@ let package = Package(
     platforms: [
         .iOS(.v10)
     ],
+    products: [
+        .library(name: "FSPagerView", targets: ["."]),
+    ],
     targets: [
         .target(name: "BMPlayer", path: "Source")
     ],
