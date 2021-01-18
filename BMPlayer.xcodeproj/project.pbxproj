@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EAB3FCE25B5DE6B00AF0443 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EAB3FCD25B5DE6B00AF0443 /* SnapKit */; };
+		2EAB3FD425B5DF5A00AF0443 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 2EAB3FD325B5DF5A00AF0443 /* NVActivityIndicatorView */; };
+		2EAB3FD625B5DF5A00AF0443 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 2EAB3FD525B5DF5A00AF0443 /* NVActivityIndicatorViewExtended */; };
 		6A53E1971FB1A54300928FA3 /* BMPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A53E1961FB1A54200928FA3 /* BMPlayerManager.swift */; };
 		6A5B61D01EADB5DA00158FF9 /* BMPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A5B61C41EADB5DA00158FF9 /* BMPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A5B61D11EADB5DA00158FF9 /* BMPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B61C51EADB5DA00158FF9 /* BMPlayer.swift */; };
@@ -18,8 +21,6 @@
 		6A5B61D81EADB5DA00158FF9 /* BMSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B61CC1EADB5DA00158FF9 /* BMSubtitles.swift */; };
 		6A5B61D91EADB5DA00158FF9 /* BMTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B61CD1EADB5DA00158FF9 /* BMTimeSlider.swift */; };
 		6A5B61DB1EADB5DA00158FF9 /* Pod_Asset_BMPlayer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5B61CF1EADB5DA00158FF9 /* Pod_Asset_BMPlayer.xcassets */; };
-		6A6FDBA61DF19AB3003727BC /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6FDBA21DF19A39003727BC /* NVActivityIndicatorView.framework */; };
-		6A6FDBA71DF19AB3003727BC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6FDBA31DF19A39003727BC /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,6 @@
 		6A5B61CD1EADB5DA00158FF9 /* BMTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMTimeSlider.swift; sourceTree = "<group>"; };
 		6A5B61CE1EADB5DA00158FF9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5B61CF1EADB5DA00158FF9 /* Pod_Asset_BMPlayer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pod_Asset_BMPlayer.xcassets; sourceTree = "<group>"; };
-		6A6FDBA21DF19A39003727BC /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
-		6A6FDBA31DF19A39003727BC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6FDBA61DF19AB3003727BC /* NVActivityIndicatorView.framework in Frameworks */,
-				6A6FDBA71DF19AB3003727BC /* SnapKit.framework in Frameworks */,
+				2EAB3FD425B5DF5A00AF0443 /* NVActivityIndicatorView in Frameworks */,
+				2EAB3FCE25B5DE6B00AF0443 /* SnapKit in Frameworks */,
+				2EAB3FD625B5DF5A00AF0443 /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +92,6 @@
 		6A6FDBA11DF19A39003727BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A6FDBA21DF19A39003727BC /* NVActivityIndicatorView.framework */,
-				6A6FDBA31DF19A39003727BC /* SnapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,6 +124,11 @@
 			dependencies = (
 			);
 			name = BMPlayer;
+			packageProductDependencies = (
+				2EAB3FCD25B5DE6B00AF0443 /* SnapKit */,
+				2EAB3FD325B5DF5A00AF0443 /* NVActivityIndicatorView */,
+				2EAB3FD525B5DF5A00AF0443 /* NVActivityIndicatorViewExtended */,
+			);
 			productName = BMPlayer;
 			productReference = 6A302EE81DF199F700AD54B6 /* BMPlayer.framework */;
 			productType = "com.apple.product-type.framework";
@@ -147,13 +150,18 @@
 				};
 			};
 			buildConfigurationList = 6A302EE21DF199F700AD54B6 /* Build configuration list for PBXProject "BMPlayer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 6A302EDE1DF199F700AD54B6;
+			packageReferences = (
+				2EAB3FCC25B5DE6B00AF0443 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2EAB3FD225B5DF5A00AF0443 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = 6A302EE91DF199F700AD54B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -300,10 +308,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -326,12 +335,18 @@
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.eliyar.BMPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -350,12 +365,18 @@
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.eliyar.BMPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -381,6 +402,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EAB3FCC25B5DE6B00AF0443 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		2EAB3FD225B5DF5A00AF0443 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thphuoc/NVActivityIndicatorView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2EAB3FCD25B5DE6B00AF0443 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EAB3FCC25B5DE6B00AF0443 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2EAB3FD325B5DF5A00AF0443 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EAB3FD225B5DF5A00AF0443 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		2EAB3FD525B5DF5A00AF0443 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EAB3FD225B5DF5A00AF0443 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A302EDF1DF199F700AD54B6 /* Project object */;
 }

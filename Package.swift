@@ -7,10 +7,10 @@ let package = Package(
         .iOS(.v10)
     ],
     products: [
-        .library(name: "BMPlayer", targets: ["BMPlayer"]),
+        .library(name: "BMPlayer", targets: ["BMPLayer"]),
     ],
     targets: [
-        .target(name: "BMPlayer", path: "Source")
+        .target(name: "BMPlayer", path: "Sources")
     ],
     swiftLanguageVersions: [
         .v5
