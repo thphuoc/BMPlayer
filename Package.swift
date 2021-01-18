@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v10)
     ],
     products: [
-        .library(name: "FSPagerView", targets: ["."]),
+        .library(name: "BMPlayer", targets: ["BMPlayer"]),
     ],
     targets: [
         .target(name: "BMPlayer", path: "Source")
